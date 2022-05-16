@@ -11,7 +11,7 @@ NTSTATUS DriverEntry(PDRIVER_OBJECT pDriverObject, PUNICODE_STRING pRegistryPath
 	UNREFERENCED_PARAMETER(pRegistryPath);
 
 	pDriverObject->DriverUnload = UnloadDriver;
-	DebugMessage("ENTERED DRIVER: v1.8 \n");
+	DebugMessage("ENTERED DRIVER: v1.9 \n");
 
 	PsSetLoadImageNotifyRoutine(ImageLoadCallback);
 

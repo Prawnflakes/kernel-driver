@@ -192,11 +192,14 @@
     <FilesToPackage Include="$(TargetPath)" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="data.h" />
+    <ClInclude Include="events.h" />
     <ClInclude Include="main.h" />
     <ClInclude Include="memory.h" />
     <ClInclude Include="messages.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="events.c" />
     <ClCompile Include="main.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

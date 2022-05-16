@@ -11,15 +11,20 @@ NTSTATUS DriverEntry(PDRIVER_OBJECT pDriverObject, PUNICODE_STRING pRegistryPath
 	UNREFERENCED_PARAMETER(pRegistryPath);
 
 	pDriverObject->DriverUnload = UnloadDriver;
-	DebugMessage("TEST ENTERED DRIVER\n");
+	DebugMessage("ENTERED DRIVER: v1.8 \n");
 
 	PsSetLoadImageNotifyRoutine(ImageLoadCallback);
 
-	RtlInitUnicodeString(&dev, L"\\Device\\kernelmodelib");
-	RtlInitUnicodeString(&dos, L"\\DosDevices\\kernelmodelib");
+	RtlInitUnicodeString(&dev, L"\\Device\\kernel-mode-lib");
+	RtlInitUnicodeString(&dos, L"\\DosDevices\\kernel-mode-lib");
 
 	IoCreateDevice(pDriverObject, 0, &dev, FILE_DEVICE_UNKNOWN, FILE_DEVICE_SECURE_OPEN, FALSE, &pDeviceObject);
-	IoCreateSymbolicLink(&dos, &dev);
+	NTSTATUS res = IoCreateSymbolicLink(&dos, &dev);
+	if (res != STATUS_SUCCESS)
+	{
+		DebugMessage("IoCreateSymbolicLink() has failed");
+	}
+	pDriverObject->DeviceObject = pDeviceObject;
 
 	pDriverObject->MajorFunction[IRP_MJ_CREATE] = CreateCall;
 	pDriverObject->MajorFunction[IRP_MJ_CLOSE] = CloseCall;

@@ -192,6 +192,7 @@
     <FilesToPackage Include="$(TargetPath)" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="communication.h" />
     <ClInclude Include="data.h" />
     <ClInclude Include="events.h" />
     <ClInclude Include="main.h" />
@@ -199,6 +200,7 @@
     <ClInclude Include="messages.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="communication.c" />
     <ClCompile Include="events.c" />
     <ClCompile Include="main.c" />
   </ItemGroup>

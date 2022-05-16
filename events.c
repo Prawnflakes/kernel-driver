@@ -15,7 +15,7 @@ PLOAD_IMAGE_NOTIFY_ROUTINE ImageLoadCallback(PUNICODE_STRING FullImageName, HAND
 		DebugMessage("Found Assault Cube \n");
 		AssaultCubeBaseAddr = ProcessId;
 
-		DebugMessage("pid: %lu \n", AssaultCubeBaseAddr);
+		DebugMessage("pid: %x \n", ProcessId);
 	}
 	return STATUS_SUCCESS;
 }

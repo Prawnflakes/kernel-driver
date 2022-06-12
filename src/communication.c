@@ -45,7 +45,7 @@ NTSTATUS IoControl(PDEVICE_OBJECT DeviceObject, PIRP Irp)
     if (ControlCode == IO_GET_CLIENT_ADDRESS)
     {
         PULONG Output = (PULONG)Irp->AssociatedIrp.SystemBuffer;
-        *Output = AssaultCubeBaseAddr;
+        *Output = BaseAddr;
 
         DebugMessage("Client base addr requested \n");
 

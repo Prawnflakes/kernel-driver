@@ -1,3 +1,4 @@
+#pragma warning (disable: 4047 4024)
 #include "memory.h"
 
 NTSTATUS KernelReadVirtualMemory(PEPROCESS Process, PVOID SourceAddress, PVOID TargetAddress, SIZE_T Size)

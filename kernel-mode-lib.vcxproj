@@ -192,18 +192,18 @@
     <FilesToPackage Include="$(TargetPath)" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="communication.h" />
-    <ClInclude Include="data.h" />
-    <ClInclude Include="events.h" />
-    <ClInclude Include="main.h" />
-    <ClInclude Include="memory.h" />
-    <ClInclude Include="messages.h" />
+    <ClInclude Include="src\communication.h" />
+    <ClInclude Include="src\data.h" />
+    <ClInclude Include="src\events.h" />
+    <ClInclude Include="src\main.h" />
+    <ClInclude Include="src\memory.h" />
+    <ClInclude Include="src\messages.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="communication.c" />
-    <ClCompile Include="events.c" />
-    <ClCompile Include="main.c" />
-    <ClCompile Include="memory.c" />
+    <ClCompile Include="src\communication.c" />
+    <ClCompile Include="src\events.c" />
+    <ClCompile Include="src\main.c" />
+    <ClCompile Include="src\memory.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -12,8 +12,8 @@ PLOAD_IMAGE_NOTIFY_ROUTINE ImageLoadCallback(PUNICODE_STRING FullImageName, HAND
 
 	if (wcsstr(FullImageName->Buffer, L"\\AssaultCube\\bin_win32\\ac_client.exe")) 
 	{
-		DebugMessage("Found Assault Cube \n");
-		AssaultCubeBaseAddr = ProcessId;
+		DebugMessage("Target found! \n");
+		BaseAddr = ProcessId;
 
 		DebugMessage("pid: %x \n", ProcessId);
 	}

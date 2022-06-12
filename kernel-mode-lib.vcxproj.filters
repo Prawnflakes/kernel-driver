@@ -24,36 +24,36 @@
     </Inf>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="memory.h">
+    <ClInclude Include="src\memory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="main.h">
+    <ClInclude Include="src\main.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="messages.h">
+    <ClInclude Include="src\messages.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="events.h">
+    <ClInclude Include="src\events.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="data.h">
+    <ClInclude Include="src\data.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="communication.h">
+    <ClInclude Include="src\communication.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.c">
+    <ClCompile Include="src\main.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="events.c">
+    <ClCompile Include="src\events.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="communication.c">
+    <ClCompile Include="src\communication.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="memory.c">
+    <ClCompile Include="src\memory.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

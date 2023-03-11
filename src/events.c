@@ -1,4 +1,4 @@
-#pragma warning (disable: 4047)
+#pragma warning (disable: 4047 4311)
 
 #include "events.h"
 #include "messages.h"
@@ -10,12 +10,15 @@ PLOAD_IMAGE_NOTIFY_ROUTINE ImageLoadCallback(PUNICODE_STRING FullImageName, HAND
 
 	//DebugMessage("Loaded image: %ls \n", FullImageName->Buffer);
 
-	if (wcsstr(FullImageName->Buffer, L"\\AssaultCube\\bin_win32\\ac_client.exe")) 
+	if (wcsstr(FullImageName->Buffer, L"\\AssaultCube 1.3.0.2\\bin_win32\\ac_client.exe")) 
 	{
 		DebugMessage("Target found! \n");
-		BaseAddr = ProcessId;
+		BaseAddr = ImageInfo->ImageBase;
+		ProcessID = (ULONG)ProcessId;
 
-		DebugMessage("pid: %x \n", ProcessId);
+		DebugMessage("pid: %u \n", ProcessID);
+		DebugMessage("BaseAddr: %X \n", BaseAddr);
+
 	}
 	return STATUS_SUCCESS;
 }
